@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <script type="module" defer src="main.js"></script>
+  </head>
+  <body>
+    <form id="myForm" onsubmit="handleSubmit(event)">
+      <form-field
+        placeholder="Test Placeholder 1"
+        input-id="test-input-id"
+        label="Test Label 1"
+      ></form-field>
+      <form-field
+        placeholder="Test Placeholder 2"
+        input-id="test-input-id-2"
+        label="Test Label 2"
+      ></form-field>
+      <form-field
+        placeholder="Test Placeholder 3"
+        input-id="test-input-id-3"
+        label="Test Label 3"
+      ></form-field>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+  <script>
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      alert(`input 1: ${e.target.querySelector("#test-input-id").value}`);
+      alert(`input 1: ${e.target.querySelector("#test-input-id-2").value}`);
+      alert(`input 1: ${e.target.querySelector("#test-input-id-3").value}`);
+    };
+  </script>
+</html>
